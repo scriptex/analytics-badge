@@ -110,7 +110,7 @@ In HTML: `<img src="https://<deploy-id>.vercel.app/api/analytics?viewId=21111368
 
 `https://<deploy-id>.vercel.app/api/analytics?viewId=211113681&metric=ga:bounceRate&startDate=yesterday&title=Bounce%20Rate&unit=%25&style=for-the-badge&color=blue`
 
-![Shield](https://google-analytics.atanas.info/api/analytics?viewId=128846594&metric=ga:bounceRate&startDate=yesterday&title=Bounce%20Rate&unit=%25&style=for-the-badge&color=blue)
+![Shield](https://google-analytics.atanas.info/api/analytics?viewId=128846594&metric=ga:bounceRate&startDate=yesterday&title=Bounce%20Rate&unit=%25&color=blue)
 
 ## Contribute
 
