@@ -1,6 +1,6 @@
 # Google Analytics Badges
 
-![Pageviews](https://kubo.vercel.app/api/analytics?viewId=235430310&metric=ga:pageviews&title=pageviews&style=flat&color=blue)
+![Pageviews](https://google-analytics.atanas.info/api/analytics?viewId=128846594&metric=ga:pageviews&title=pageviews&style=flat&color=blue)
 
 Node.js wrapper serverless service to generate Shields IO-style badges for Google Analytics. Authenticates with the Reporting API using JWT tokens and uses shields to generate badges for traffic stats. Fully customizable. Works with Universal Analytics but not GA4 properties.
 
@@ -56,7 +56,7 @@ Adapt the code in `integrate.js` into your existing server code. Full documentat
 
 Since it requires private keys, the best way is to deploy your own instance of this service. We will be using Vercel for free serverless deployments.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Feightants%2Fanalytics-badge&env=CLIENT_EMAIL,PRIVATE_KEY&envDescription=These%20values%20are%20defined%20in%20the%20JSON%20file%20downloaded%20from%20your%20service%20account&envLink=https%3A%2F%2Fgithub.com%2Feightants%2Fanalytics-badge&project-name=analytics&repo-name=analytics-badge)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fscriptex%2Fanalytics-badge&env=CLIENT_EMAIL,PRIVATE_KEY&envDescription=These%20values%20are%20defined%20in%20the%20JSON%20file%20downloaded%20from%20your%20service%20account%20&envLink=https%3A%2F%2Fgithub.com%2Fscriptex%2Fanalytics-badge%23deploying-a-serverless-instance)
 
 _Automate steps 1-5 with the button above_
 
@@ -98,22 +98,22 @@ In Markdown: `![Users](https://<deploy-id>.vercel.app/api/analytics?viewId=21111
 
 In HTML: `<img src="https://<deploy-id>.vercel.app/api/analytics?viewId=211113681"/>`
 
-![Users Shield](https://kubo.vercel.app/api/analytics?viewId=211113681)
+![Users Shield](https://google-analytics.atanas.info/api/analytics?viewId=128846594)
 
 ### Pageviews per month
 
 `https://<deploy-id>.vercel.app/api/analytics?viewId=211113681&metric=ga:pageviews&startDate=30daysAgo&title=pageviews&unit=%2Fmonth`
 
-![Views Shield](https://kubo.vercel.app/api/analytics?viewId=211113681&metric=ga:pageviews&startDate=30daysAgo&title=pageviews&unit=%2Fmonth)
+![Views Shield](https://google-analytics.atanas.info/api/analytics?viewId=128846594&metric=ga:pageviews&startDate=30daysAgo&title=pageviews&unit=%2Fmonth)
 
 ### Bounce Rate over the past day with badge styles
 
 `https://<deploy-id>.vercel.app/api/analytics?viewId=211113681&metric=ga:bounceRate&startDate=yesterday&title=Bounce%20Rate&unit=%25&style=for-the-badge&color=blue`
 
-![Shield](https://kubo.vercel.app/api/analytics?viewId=211113681&metric=ga:bounceRate&startDate=yesterday&title=Bounce%20Rate&unit=%25&style=for-the-badge&color=blue)
+![Shield](https://google-analytics.atanas.info/api/analytics?viewId=128846594&metric=ga:bounceRate&startDate=yesterday&title=Bounce%20Rate&unit=%25&style=for-the-badge&color=blue)
 
 ## Contribute
 
 Feel free to contribute corrections in this guide or provide documentation on how to set up this project on other serverless platforms such as GCP or AWS Lambda.
 
-![Analytics](https://ga-beacon.appspot.com/UA-132344171-6/github.com/Naereen/badges/README.md?pixel)
+
