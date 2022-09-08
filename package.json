@@ -1,39 +1,48 @@
 {
-  "name": "analytics-badge",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "prettier-format": "prettier --write .",
-    "lint": "eslint ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run prettier-format",
-      "npm run lint"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eightants/analytics-badge.git"
-  },
-  "author": "Anthony Teo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eightants/analytics-badge/issues"
-  },
-  "homepage": "https://github.com/eightants/analytics-badge#readme",
-  "devDependencies": {
-    "eslint": "^8.23.0",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.2.1"
-  },
-  "dependencies": {
-    "googleapis": "^107.0.0",
-    "husky": "^8.0.1"
-  }
+	"name": "analytics-badge",
+	"version": "1.0.0",
+	"description": "Shields.io-style badges for Google Analytics",
+	"keywords": [
+		"NodeJS",
+		"Serverless",
+		"Google Analytics",
+		"Badges",
+		"Badge Generator"
+	],
+	"homepage": "https://atanas.info/projects/analytics-badge.html",
+	"bugs": {
+		"url": "https://github.com/scriptex/analytics-badge/issues",
+		"email": "hi@atanas.info"
+	},
+	"license": "MIT",
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"funding": "https://github.com/sponsors/scriptex",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/scriptex/analytics-badge.git"
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"prettier": "prettier --write ."
+	},
+	"dependencies": {
+		"googleapis": "107.0.0"
+	},
+	"devDependencies": {
+		"eslint": "8.23.0",
+		"husky": "8.0.1",
+		"lint-staged": "13.0.3",
+		"prettier": "2.2.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"yarn prettier",
+			"yarn lint"
+		]
+	}
 }
