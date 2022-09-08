@@ -1,8 +1,10 @@
 # Google Analytics Badges
 
+> https://google-analytics.atanas.info/
+
 ![Pageviews](https://google-analytics.atanas.info/api/analytics?viewId=128846594&metric=ga:pageviews&title=pageviews&style=flat&color=blue)
 
-Node.js wrapper serverless service to generate Shields IO-style badges for Google Analytics. Authenticates with the Reporting API using JWT tokens and uses shields to generate badges for traffic stats. Fully customizable. Works with Universal Analytics but not GA4 properties.
+Node.js wrapper for a serverless service to generate Shields IO-style badges for Google Analytics. Authenticates with the Reporting API using JWT tokens and uses shields to generate badges for traffic stats. Fully customizable. Works with Universal Analytics but not GA4 properties.
 
 ## Quickstart
 
@@ -18,18 +20,18 @@ Google service account credentials are needed for JWT authentication.
 
 Your file will look like this. `client_email` and `private_key` are the values you'll need for the next steps.
 
-```
+```json
 {
   "type": "service_account",
-  "project_id": "id-of-project",
-  "private_key_id": "a1b2c3d4e5f6",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCRApln/AtI3bdq\nOI3gdYHZRDORr/DN+RxMOOIG4eSF77jXJuLPEB8BAoGAFiTHeOhyvXL1Yxks+Xe/\nyCKZ1FPVYbzOR3fbARzwvSFITMEhmPy+A1Gj//D1pCarNg3s2eGKcWbvaU/uFiza\nFNAiPipmFp3Xnt7m07gKw25mgbMScaCJUeLOGdnGNXaHQ2aCieAXiA5aZbyjcyhX\n8vWRouHly8HoEOdrc8BOfTA=\n-----END PRIVATE KEY-----\n",
-  "client_email": "eightants@dummydata.gserviceaccount.com",
-  "client_id": "1234567890",
+  "project_id": "PROJECT_ID",
+  "private_key_id": "PRIVATE_KEY_ID",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nPRIVATE_KEY\n-----END PRIVATE KEY-----\n",
+  "client_email": "CLIENT_EMAIL",
+  "client_id": "CLIENT_ID",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/at8/analyticsdummy.gserviceaccount.com"
+  "client_x509_cert_url": "CLIENT_CERT_URL"
 }
 ```
 
@@ -64,10 +66,7 @@ _Automate steps 1-5 with the button above_
 2. Create an account on Vercel.
 3. From the dashboard page click Import Project then specify the URL to your fork of the project on GitHub.
 4. Add the required environment variables CLIENT_EMAIL and PRIVATE_KEY. These values correspond to `client-email` and `private-key` above.
-
-(In this example, the values would be `eightants@dummydata.gserviceaccount.com` and `-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCRApln/AtI3bdq\nOI3gdYHZRDORr/DN+RxMOOIG4eSF77jXJuLPEB8BAoGAFiTHeOhyvXL1Yxks+Xe/\nyCKZ1FPVYbzOR3fbARzwvSFITMEhmPy+A1Gj//D1pCarNg3s2eGKcWbvaU/uFiza\nFNAiPipmFp3Xnt7m07gKw25mgbMScaCJUeLOGdnGNXaHQ2aCieAXiA5aZbyjcyhX\n8vWRouHly8HoEOdrc8BOfTA=\n-----END PRIVATE KEY-----\n`)
-
-5. Deploy and visit your application at `<deploy-id>.vercel.app`.
+5. Deploy and visit your application at `<deploy-id>.vercel.app` or the custom domain which you configured.
 
 Visit your Google Analytics dashboard and obtain the `viewId` for your project of interest from `Admin > View > View Settings > View ID`. You can now generate shields.io badges for any of your Analytics projects with this endpoint.
 

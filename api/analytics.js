@@ -2,7 +2,7 @@ const fetchReport = require("../fetchReport.js");
 const abbreviate = require("../abbreviate.js");
 
 const key = {
-  private_key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
+  private_key: process.env.PRIVATE_KEY?.replace(/\\n/g, "\n"),
   client_email: process.env.CLIENT_EMAIL,
 };
 
